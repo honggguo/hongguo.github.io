@@ -1,280 +1,185 @@
-
-
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=auto>
-
-
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/bg/icon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#f2eada">
-  <meta name="author" content="John Doe">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="ajax 全名 async javascript and XML 是前后台交互的能力 也就是我们客户端给服务端发送消息的工具，以及接受响应的工具 是一个 默认异步 执行机制的功能  AJAX 的优势 不需要插件的支持，原生 js 就可以使用 用户体验好（不需要刷新页面就可以更新数据） 减轻服务端和带宽的负担 缺点： 搜索引擎的支持度不够，因为数据都不在页面上，搜索引擎搜索不到  AJAX 的使用">
-<meta property="og:type" content="article">
-<meta property="og:title" content="javascript">
-<meta property="og:url" content="http://example.com/2022/10/18/javascript/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ajax 全名 async javascript and XML 是前后台交互的能力 也就是我们客户端给服务端发送消息的工具，以及接受响应的工具 是一个 默认异步 执行机制的功能  AJAX 的优势 不需要插件的支持，原生 js 就可以使用 用户体验好（不需要刷新页面就可以更新数据） 减轻服务端和带宽的负担 缺点： 搜索引擎的支持度不够，因为数据都不在页面上，搜索引擎搜索不到  AJAX 的使用">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-10-18T15:06:00.000Z">
-<meta property="article:modified_time" content="2022-10-18T15:07:39.028Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-    <meta name="referrer" content="no-referrer-when-downgrade">
-  
-  
-  <title>javascript - Hexo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            javascript |
+        
+        Keep Theme
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
 
+    
+<link rel="stylesheet" href="/fontawesome/css/regular.min.css">
 
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":"ture","scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":{"enable":false}},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block_tools":{"enable":false,"style":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.9"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"};
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
-
-  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
-  
-
-  <header>
+<div class="progress-bar-container">
     
 
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>hongguo&#39;s Blogs</strong>
-    </a>
+    
+</div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                Home
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                Archives
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                Categories
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                Tags
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                About
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Keep Theme
             </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</nav>
 
-  
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
 
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="javascript"></span>
-          
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">javascript</span>
         </div>
 
         
-          
-  <div class="mt-3">
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Keep Team</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-10-18 23:06:00</span>
+        <span class="mobile">2022-10-18 23:06</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2022-10-18 23:07:39</span>
+    </span>
     
     
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-18 23:06" pubdate>
-          October 18, 2022 pm
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          5.3k words
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          45 mins
-        
-      </span>
     
 
     
     
-  </div>
-
-
-        
-      </div>
-
-      
-    </div>
-  </div>
+    
+    
 </div>
 
-</div>
+                    </div>
+                </div>
+            </div>
+        
 
-  </header>
-
-  <main>
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">javascript</h1>
-            
-            
-              <div class="markdown-body">
-                
-                <ul>
+        <div class="article-content markdown-body">
+            <ul>
 <li><code>ajax</code> 全名 <code>async javascript and XML</code></li>
 <li>是前后台交互的能力</li>
 <li>也就是我们客户端给服务端发送消息的工具，以及接受响应的工具</li>
@@ -290,18 +195,18 @@
 <li>在 js 中有内置的构造函数来创建 ajax 对象</li>
 <li>创建 ajax 对象以后，我们就使用 ajax 对象的方法去发送请求和接受响应</li>
 </ul>
-<h6 id="创建一个-ajax-对象"><a href="#创建一个-ajax-对象" class="headerlink" title="创建一个 ajax 对象"></a>创建一个 ajax 对象</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// IE9及以上</span><br><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>()<br><br><span class="hljs-comment">// IE9以下</span><br><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ActiveXObject</span>(<span class="hljs-string">&#x27;Mricosoft.XMLHTTP&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<h6 id="创建一个-ajax-对象"><a href="#创建一个-ajax-对象" class="headerlink" title="创建一个 ajax 对象"></a>创建一个 ajax 对象</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// IE9及以上</span></span><br><span class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// IE9以下</span></span><br><span class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">ActiveXObject</span>(<span class="string">&#x27;Mricosoft.XMLHTTP&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>上面就是有了一个 ajax 对象</li>
 <li>我们就可以使用这个 <code>xhr</code> 对象来发送 ajax 请求了</li>
 </ul>
-<h6 id="配置链接信息"><a href="#配置链接信息" class="headerlink" title="配置链接信息"></a>配置链接信息</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>()<br><br><span class="hljs-comment">// xhr 对象中的 open 方法是来配置请求信息的</span><br><span class="hljs-comment">// 第一个参数是本次请求的请求方式 get / post / put / ...</span><br><span class="hljs-comment">// 第二个参数是本次请求的 url </span><br><span class="hljs-comment">// 第三个参数是本次请求是否异步，默认 true 表示异步，false 表示同步</span><br><span class="hljs-comment">// xhr.open(&#x27;请求方式&#x27;, &#x27;请求地址&#x27;, 是否异步)</span><br>xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;./data.php&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<h6 id="配置链接信息"><a href="#配置链接信息" class="headerlink" title="配置链接信息"></a>配置链接信息</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// xhr 对象中的 open 方法是来配置请求信息的</span></span><br><span class="line"><span class="comment">// 第一个参数是本次请求的请求方式 get / post / put / ...</span></span><br><span class="line"><span class="comment">// 第二个参数是本次请求的 url </span></span><br><span class="line"><span class="comment">// 第三个参数是本次请求是否异步，默认 true 表示异步，false 表示同步</span></span><br><span class="line"><span class="comment">// xhr.open(&#x27;请求方式&#x27;, &#x27;请求地址&#x27;, 是否异步)</span></span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;get&#x27;</span>, <span class="string">&#x27;./data.php&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>上面的代码执行完毕以后，本次请求的基本配置信息就写完了</li>
 </ul>
-<h6 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>()<br>xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;./data.php&#x27;</span>)<br><br><span class="hljs-comment">// 使用 xhr 对象中的 send 方法来发送请求</span><br>xhr.<span class="hljs-title function_">send</span>()<br></code></pre></td></tr></table></figure>
+<h6 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;get&#x27;</span>, <span class="string">&#x27;./data.php&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 xhr 对象中的 send 方法来发送请求</span></span><br><span class="line">xhr.<span class="title function_">send</span>()</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>上面代码是把配置好信息的 ajax 对象发送到服务端</li>
@@ -343,7 +248,7 @@
 <li><p>也就是说只要 <code>readyState</code> 的值发生变化了，那么就会触发该事件</p>
 </li>
 <li><p>所以我们就在这个事件中来监听 ajax 的 <code>readyState</code> 是不是到 4 了</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>()<br>xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;./data.php&#x27;</span>)<br><br>xhr.<span class="hljs-title function_">send</span>()<br><br>xhr.<span class="hljs-property">onreadyStateChange</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">// 每次 readyState 改变的时候都会触发该事件</span><br>  <span class="hljs-comment">// 我们就在这里判断 readyState 的值是不是到 4</span><br>  <span class="hljs-comment">// 并且 http 的状态码是不是 200 ~ 299</span><br>  <span class="hljs-keyword">if</span> (xhr.<span class="hljs-property">readyState</span> === <span class="hljs-number">4</span> &amp;&amp; <span class="hljs-regexp">/^2\d&#123;2&#125;$/</span>.<span class="hljs-title function_">test</span>(xhr.<span class="hljs-property">status</span>)) &#123;<br>    <span class="hljs-comment">// 这里表示验证通过</span><br>    <span class="hljs-comment">// 我们就可以获取服务端给我们响应的内容了</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;get&#x27;</span>, <span class="string">&#x27;./data.php&#x27;</span>)</span><br><span class="line"></span><br><span class="line">xhr.<span class="title function_">send</span>()</span><br><span class="line"></span><br><span class="line">xhr.<span class="property">onreadyStateChange</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// 每次 readyState 改变的时候都会触发该事件</span></span><br><span class="line">  <span class="comment">// 我们就在这里判断 readyState 的值是不是到 4</span></span><br><span class="line">  <span class="comment">// 并且 http 的状态码是不是 200 ~ 299</span></span><br><span class="line">  <span class="keyword">if</span> (xhr.<span class="property">readyState</span> === <span class="number">4</span> &amp;&amp; <span class="regexp">/^2\d&#123;2&#125;$/</span>.<span class="title function_">test</span>(xhr.<span class="property">status</span>)) &#123;</span><br><span class="line">    <span class="comment">// 这里表示验证通过</span></span><br><span class="line">    <span class="comment">// 我们就可以获取服务端给我们响应的内容了</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h6 id="responseText"><a href="#responseText" class="headerlink" title="responseText"></a>responseText</h6><ul>
 <li><p>ajax 对象中的 <code>responseText</code> 成员</p>
@@ -351,7 +256,7 @@
 <li><p>就是用来记录服务端给我们的响应体内容的</p>
 </li>
 <li><p>所以我们就用这个成员来获取响应体内容就可以</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>()<br>xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;./data.php&#x27;</span>)<br><br>xhr.<span class="hljs-title function_">send</span>()<br><br>xhr.<span class="hljs-property">onreadyStateChange</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">if</span> (xhr.<span class="hljs-property">readyState</span> === <span class="hljs-number">4</span> &amp;&amp; <span class="hljs-regexp">/^2\d&#123;2&#125;$/</span>.<span class="hljs-title function_">test</span>(xhr.<span class="hljs-property">status</span>)) &#123;<br>    <span class="hljs-comment">// 我们在这里直接打印 xhr.responseText 来查看服务端给我们返回的内容</span><br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(xhr.<span class="hljs-property">responseText</span>)<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;get&#x27;</span>, <span class="string">&#x27;./data.php&#x27;</span>)</span><br><span class="line"></span><br><span class="line">xhr.<span class="title function_">send</span>()</span><br><span class="line"></span><br><span class="line">xhr.<span class="property">onreadyStateChange</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (xhr.<span class="property">readyState</span> === <span class="number">4</span> &amp;&amp; <span class="regexp">/^2\d&#123;2&#125;$/</span>.<span class="title function_">test</span>(xhr.<span class="property">status</span>)) &#123;</span><br><span class="line">    <span class="comment">// 我们在这里直接打印 xhr.responseText 来查看服务端给我们返回的内容</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(xhr.<span class="property">responseText</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h5 id="使用-ajax-发送请求时携带参数"><a href="#使用-ajax-发送请求时携带参数" class="headerlink" title="使用 ajax 发送请求时携带参数"></a>使用 ajax 发送请求时携带参数</h5><ul>
 <li>我们使用 ajax 发送请求也是可以携带参数的</li>
@@ -360,7 +265,7 @@
 </ul>
 <h6 id="发送一个带有参数的-get-请求"><a href="#发送一个带有参数的-get-请求" class="headerlink" title="发送一个带有参数的 get 请求"></a>发送一个带有参数的 get 请求</h6><ul>
 <li><p>get 请求的参数就直接在 url 后面进行拼接就可以</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>()<br><span class="hljs-comment">// 直接在地址后面加一个 ?，然后以 key=value 的形式传递</span><br><span class="hljs-comment">// 两个数据之间以 &amp; 分割</span><br>xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;./data.php?a=100&amp;b=200&#x27;</span>)<br><br>xhr.<span class="hljs-title function_">send</span>()<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line"><span class="comment">// 直接在地址后面加一个 ?，然后以 key=value 的形式传递</span></span><br><span class="line"><span class="comment">// 两个数据之间以 &amp; 分割</span></span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;get&#x27;</span>, <span class="string">&#x27;./data.php?a=100&amp;b=200&#x27;</span>)</span><br><span class="line"></span><br><span class="line">xhr.<span class="title function_">send</span>()</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>这样服务端就能接受到两个参数</li>
@@ -371,367 +276,179 @@
 </ul>
 <h6 id="发送一个带有参数的-post-请求"><a href="#发送一个带有参数的-post-请求" class="headerlink" title="发送一个带有参数的 post 请求"></a>发送一个带有参数的 post 请求</h6><ul>
 <li><p>post 请求的参数是携带在请求体中的，所以不需要再 url 后面拼接</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>()<br>xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;./data.php&#x27;</span>)<br><br><span class="hljs-comment">// 如果是用 ajax 对象发送 post 请求，必须要先设置一下请求头中的 content-type</span><br><span class="hljs-comment">// 告诉一下服务端我给你的是一个什么样子的数据格式</span><br>xhr.<span class="hljs-title function_">setRequestHeader</span>(<span class="hljs-string">&#x27;content-type&#x27;</span>, <span class="hljs-string">&#x27;application/x-www-form-urlencoded&#x27;</span>)<br><br><span class="hljs-comment">// 请求体直接再 send 的时候写在 () 里面就行</span><br><span class="hljs-comment">// 不需要问号，直接就是 &#x27;key=value&amp;key=value&#x27; 的形式</span><br>xhr.<span class="hljs-title function_">send</span>(<span class="hljs-string">&#x27;a=100&amp;b=200&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;get&#x27;</span>, <span class="string">&#x27;./data.php&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果是用 ajax 对象发送 post 请求，必须要先设置一下请求头中的 content-type</span></span><br><span class="line"><span class="comment">// 告诉一下服务端我给你的是一个什么样子的数据格式</span></span><br><span class="line">xhr.<span class="title function_">setRequestHeader</span>(<span class="string">&#x27;content-type&#x27;</span>, <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求体直接再 send 的时候写在 () 里面就行</span></span><br><span class="line"><span class="comment">// 不需要问号，直接就是 &#x27;key=value&amp;key=value&#x27; 的形式</span></span><br><span class="line">xhr.<span class="title function_">send</span>(<span class="string">&#x27;a=100&amp;b=200&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><code>application/x-www-form-urlencoded</code> 表示的数据格式就是 <code>key=value&amp;key=value</code></li>
 </ul>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><code class="hljs JS"><span class="hljs-comment">// <span class="hljs-doctag">TODO:</span>GET方式也支持传参数</span><br>   <span class="hljs-comment">// ajax.open(&quot;GET&quot;, &quot;http://localhost:3000/users?username=liuhongguo&quot;)</span><br><br><br>   <span class="hljs-keyword">const</span> myget = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;#myget&#x27;</span>);<br>   myget.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>       <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;myget clicked&quot;</span>)<br>       <span class="hljs-keyword">const</span> ajax = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br>       ajax.<span class="hljs-title function_">open</span>(<span class="hljs-string">&quot;GET&quot;</span>, <span class="hljs-string">&quot;http://localhost:3000/users?username=XUSHIZHAN&quot;</span>)<br><br>       ajax.<span class="hljs-property">onload</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>           <span class="hljs-keyword">if</span> (ajax.<span class="hljs-property">status</span> === <span class="hljs-number">200</span>) &#123;<br>               <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">parse</span>(ajax.<span class="hljs-property">responseText</span>))<br>           &#125;<br>          <br>       &#125;<br>       ajax.<span class="hljs-title function_">send</span>()<br>   &#125;<br><br><br>   <br>   <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span>post接口发送过的内容可以是：</span><br>   <span class="hljs-comment">// 1. name= name &amp;&amp; age = 18 字符串模式</span><br>   <span class="hljs-comment">// 2.&#123;&quot;name&quot;：&quot;name&quot;,&quot;age&quot;:&quot;18&quot;&#125;</span><br>   <span class="hljs-comment">//当为第一种的时候需要添加一个命令：</span><br>   <span class="hljs-comment">// ajax.setResponseHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;)</span><br>   <span class="hljs-comment">// 第二种JSON的方式</span><br>   <span class="hljs-comment">// ajax.setResponseHeader(&quot;Content-Type&quot;, &quot;application/json&quot;)</span><br>   <br><br>   mypost.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>       <span class="hljs-keyword">const</span> ajax = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br>       ajax.<span class="hljs-title function_">open</span>(<span class="hljs-string">&quot;POST&quot;</span>, <span class="hljs-string">&quot;http://localhost:3000/users&quot;</span>)<br><br>       ajax.<span class="hljs-property">onload</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>           <span class="hljs-keyword">if</span> (<span class="hljs-regexp">/^2\d&#123;2&#125;$/</span>.<span class="hljs-title function_">test</span>(ajax.<span class="hljs-property">status</span>)) &#123;<br>               <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">parse</span>(ajax.<span class="hljs-property">responseText</span>))<br>           &#125;<br>       &#125;<br>       ajax.<span class="hljs-title function_">setRequestHeader</span>(<span class="hljs-string">&quot;Content-Type&quot;</span>, <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span>)<br>       ajax.<span class="hljs-title function_">send</span>(<span class="hljs-string">`username=XUSHIZHAN &amp;&amp; age = 22 &amp;&amp;  password = 123`</span>)<br>   &#125;<br><br>    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span>put接口发送过的内容可以是：</span><br>   <span class="hljs-comment">//  put接口修改毁所有的都修改，当少些内容的就会直接覆盖</span><br><br><br>   myput.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>       <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;myput clicked&quot;</span>)<br>       <span class="hljs-keyword">const</span> ajax = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br>       ajax.<span class="hljs-title function_">open</span>(<span class="hljs-string">&quot;PUT&quot;</span>, <span class="hljs-string">&quot;http://localhost:3000/users/1&quot;</span>)<br><br>       ajax.<span class="hljs-property">onload</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>           <span class="hljs-keyword">if</span> (ajax.<span class="hljs-property">status</span> === <span class="hljs-number">200</span>) &#123;<br>               <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">parse</span>(ajax.<span class="hljs-property">responseText</span>))<br>           &#125;<br>          <br>       &#125;<br>       ajax.<span class="hljs-title function_">setRequestHeader</span>(<span class="hljs-string">&quot;Content-Type&quot;</span>, <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span>)<br>       ajax.<span class="hljs-title function_">send</span>(<span class="hljs-string">`username=XUSHIZHAN &amp;&amp; age = 99 &amp;&amp; password == ashdasdasdasdas`</span>)<br>   &#125;<br><br>   mydelete.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>       <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;mydelete clicked&quot;</span>)<br>       <span class="hljs-keyword">const</span> ajax = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br>       ajax.<span class="hljs-title function_">open</span>(<span class="hljs-string">&quot;PATCH&quot;</span>, <span class="hljs-string">&quot;http://localhost:3000/users/2&quot;</span>)<br><br>       ajax.<span class="hljs-property">onload</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>           <span class="hljs-keyword">if</span> (ajax.<span class="hljs-property">status</span> === <span class="hljs-number">200</span>) &#123;<br>               <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">parse</span>(ajax.<span class="hljs-property">responseText</span>))<br>           &#125;<br>          <br>       &#125;<br>       ajax.<span class="hljs-title function_">setRequestHeader</span>(<span class="hljs-string">&quot;Content-Type&quot;</span>, <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span>)<br>       ajax.<span class="hljs-title function_">send</span>(<span class="hljs-string">`username=XUSHIZHAN&amp;&amp;password=ashdasdasdasdas`</span>)<br>   &#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// <span class="doctag">TODO:</span>GET方式也支持传参数</span></span><br><span class="line">   <span class="comment">// ajax.open(&quot;GET&quot;, &quot;http://localhost:3000/users?username=liuhongguo&quot;)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   <span class="keyword">const</span> myget = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#myget&#x27;</span>);</span><br><span class="line">   myget.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;myget clicked&quot;</span>)</span><br><span class="line">       <span class="keyword">const</span> ajax = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line">       ajax.<span class="title function_">open</span>(<span class="string">&quot;GET&quot;</span>, <span class="string">&quot;http://localhost:3000/users?username=XUSHIZHAN&quot;</span>)</span><br><span class="line"></span><br><span class="line">       ajax.<span class="property">onload</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">           <span class="keyword">if</span> (ajax.<span class="property">status</span> === <span class="number">200</span>) &#123;</span><br><span class="line">               <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">JSON</span>.<span class="title function_">parse</span>(ajax.<span class="property">responseText</span>))</span><br><span class="line">           &#125;</span><br><span class="line">          </span><br><span class="line">       &#125;</span><br><span class="line">       ajax.<span class="title function_">send</span>()</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">   <span class="comment">// <span class="doctag">TODO:</span>post接口发送过的内容可以是：</span></span><br><span class="line">   <span class="comment">// 1. name= name &amp;&amp; age = 18 字符串模式</span></span><br><span class="line">   <span class="comment">// 2.&#123;&quot;name&quot;：&quot;name&quot;,&quot;age&quot;:&quot;18&quot;&#125;</span></span><br><span class="line">   <span class="comment">//当为第一种的时候需要添加一个命令：</span></span><br><span class="line">   <span class="comment">// ajax.setResponseHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;)</span></span><br><span class="line">   <span class="comment">// 第二种JSON的方式</span></span><br><span class="line">   <span class="comment">// ajax.setResponseHeader(&quot;Content-Type&quot;, &quot;application/json&quot;)</span></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">   mypost.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">       <span class="keyword">const</span> ajax = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line">       ajax.<span class="title function_">open</span>(<span class="string">&quot;POST&quot;</span>, <span class="string">&quot;http://localhost:3000/users&quot;</span>)</span><br><span class="line"></span><br><span class="line">       ajax.<span class="property">onload</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">           <span class="keyword">if</span> (<span class="regexp">/^2\d&#123;2&#125;$/</span>.<span class="title function_">test</span>(ajax.<span class="property">status</span>)) &#123;</span><br><span class="line">               <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">JSON</span>.<span class="title function_">parse</span>(ajax.<span class="property">responseText</span>))</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       ajax.<span class="title function_">setRequestHeader</span>(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;application/x-www-form-urlencoded&quot;</span>)</span><br><span class="line">       ajax.<span class="title function_">send</span>(<span class="string">`username=XUSHIZHAN &amp;&amp; age = 22 &amp;&amp;  password = 123`</span>)</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span>put接口发送过的内容可以是：</span></span><br><span class="line">   <span class="comment">//  put接口修改毁所有的都修改，当少些内容的就会直接覆盖</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   myput.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;myput clicked&quot;</span>)</span><br><span class="line">       <span class="keyword">const</span> ajax = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line">       ajax.<span class="title function_">open</span>(<span class="string">&quot;PUT&quot;</span>, <span class="string">&quot;http://localhost:3000/users/1&quot;</span>)</span><br><span class="line"></span><br><span class="line">       ajax.<span class="property">onload</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">           <span class="keyword">if</span> (ajax.<span class="property">status</span> === <span class="number">200</span>) &#123;</span><br><span class="line">               <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">JSON</span>.<span class="title function_">parse</span>(ajax.<span class="property">responseText</span>))</span><br><span class="line">           &#125;</span><br><span class="line">          </span><br><span class="line">       &#125;</span><br><span class="line">       ajax.<span class="title function_">setRequestHeader</span>(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;application/x-www-form-urlencoded&quot;</span>)</span><br><span class="line">       ajax.<span class="title function_">send</span>(<span class="string">`username=XUSHIZHAN &amp;&amp; age = 99 &amp;&amp; password == ashdasdasdasdas`</span>)</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   mydelete.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;mydelete clicked&quot;</span>)</span><br><span class="line">       <span class="keyword">const</span> ajax = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line">       ajax.<span class="title function_">open</span>(<span class="string">&quot;PATCH&quot;</span>, <span class="string">&quot;http://localhost:3000/users/2&quot;</span>)</span><br><span class="line"></span><br><span class="line">       ajax.<span class="property">onload</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">           <span class="keyword">if</span> (ajax.<span class="property">status</span> === <span class="number">200</span>) &#123;</span><br><span class="line">               <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">JSON</span>.<span class="title function_">parse</span>(ajax.<span class="property">responseText</span>))</span><br><span class="line">           &#125;</span><br><span class="line">          </span><br><span class="line">       &#125;</span><br><span class="line">       ajax.<span class="title function_">setRequestHeader</span>(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;application/x-www-form-urlencoded&quot;</span>)</span><br><span class="line">       ajax.<span class="title function_">send</span>(<span class="string">`username=XUSHIZHAN&amp;&amp;password=ashdasdasdasdas`</span>)</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/10/18/hello-world/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
 
 
                 
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>javascript</div>
-      <div>http://example.com/2022/10/18/javascript/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>Author</div>
-          <div>John Doe</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>Posted on</div>
-          <div>October 18, 2022</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>Licensed under</div>
-          <div>
-            
-              
-              
-                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2022/10/18/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">Next</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
             </div>
 
+        </div>
+
+        <div class="page-main-content-bottom">
             
-          </article>
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2022
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Keep Team</a>
+            
         </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;Table of Contents</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme
+            &nbsp;
+            <a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.9</a>
         </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
+        
+        
     </div>
-  </div>
-</div>
+</footer>
+
+        </div>
+    </div>
 
     
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-  
-    <div class="statistics">
-  
-  
-
-  
-    
-      <span id="busuanzi_container_site_pv" style="display: none">
-        Views: 
-        <span id="busuanzi_value_site_pv"></span>
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
         
-      </span>
-    
-    
-      <span id="busuanzi_container_site_uv" style="display: none">
-        Visitors: 
-        <span id="busuanzi_value_site_uv"></span>
+
+        <!-- go comment -->
         
-      </span>
-    
-    
-  
+    </ul>
 </div>
 
-  
-  
-  
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-up-right-and-down-left-from-center"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
 </div>
 
-  </footer>
+    </div>
 
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+    
 
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+    
 
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
+</main>
 
 
 
 
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
+<script src="/js/utils.js"></script>
 
+<script src="/js/main.js"></script>
 
+<script src="/js/header-shrink.js"></script>
 
+<script src="/js/back2top.js"></script>
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="/js/local-search.js" ></script>
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+<script src="/js/dark-light-toggle.js"></script>
 
 
 
 
 
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
 
 
-  
 
-  <noscript>
-    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
-  </noscript>
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
 </body>
 </html>
